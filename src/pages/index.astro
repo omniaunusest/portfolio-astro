@@ -1,6 +1,9 @@
 ---
+import { type ComplexSkill } from "../types/types";
 import Header from "../components/Header.astro";
 import Sidebar from "../components/Sidebar.astro";
+import SkillBlock from "@compontents/SkillBlock.astro";
+import { SkillBlocks } from "@data/skill-blocks";
 ---
 
 
@@ -31,74 +34,11 @@ import Sidebar from "../components/Sidebar.astro";
             <a href="mailto:a.ona.zetaefe@gmail.com	" class="button w-button">Contact</a>
           </main>
           <div class="projects-section">
-            <!-- Data & Analytics -->
-            <a href="/software-development" class="projects-container">
-              <div class="single-projects-category"
-                <div class="projects-category-image-container">
-                  <img src="./assets/browser.svg" loading="lazy" alt="" class="projects-category-image" />
-                </div>
-              </div>
-              <div class="single-projects-content">
-                <h4>Data & Analytics</h4>
-                <div class="tech-tools-container">
-                  <div class="mini-label-white gray-color">Languages</div>
-                  <div class="chips-container chips-container-small-width">
-                    <div class="single-chip small-chip">Python</div>
-                    <div class="single-chip small-chip">SQL</div></div>
-                <div class="tech-tools-container">
-                  <div class="mini-label-white gray-color">Data Processing</div>
-                  <div class="chips-container chips-container-small-width">
-                    <div class="single-chip small-chip">Pandas</div>
-                    <div class="single-chip small-chip">NumPy</div>
-                    <div class="single-chip small-chip">Matplotlib/Seaborn</div></div>
-                <div class="tech-tools-container">
-                  <div class="mini-label-white gray-color">Webs Scraping</div>
-                  <div class="chips-container chips-container-small-width">
-                    <div class="single-chip small-chip">Selenium</div>
-                    <div class="single-chip small-chip">Beautiful Soup</div></div>
-                <div class="tech-tools-container">
-                  <div class="mini-label-white gray-color">Business Intelligence</div>
-                  <div class="chips-container chips-container-small-width">
-                    <div class="single-chip small-chip">Tableau</div>
-                    <div class="single-chip small-chip">PowerBI</div></div>
-                <div class="tech-tools-container">
-                  <div class="mini-label-white gray-color">Learning in progress</div>
-                  <div class="chips-container chips-container-small-width">
-                    <div class="single-chip small-chip">PySpark</div>
-                    <div class="single-chip small-chip">DAX</div></div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <!-- Processes & Methodologies -->
-            <a href="/devops" class="projects-container">
-              <div class="single-projects-category">
-                <div class="projects-category-image-container devops-img">
-                  <img src="./assets/database.svg" loading="lazy" alt="" class="projects-category-image" />
-                </div>
-              </div>
-              <div class="single-projects-content">
-                <h4>Processes &amp;&nbsp;Methodologies</h4>
-                <div class="technologies-section">
-                  <div class="mini-label-white gray-color">Approaches &amp; </div>
-                  <div class="chips-container chips-container-small-width">
-                    <div class="single-chip small-chip">Git</div>
-                    <div class="single-chip small-chip">APIs</div>
-                    <div class="single-chip small-chip">Agile</div>
-                    <div class="single-chip small-chip">SCRUM</div>
-                    <div class="single-chip small-chip">MySQL</div>
-                    <div class="single-chip small-chip">GitLab CI/CD</div>
-                    <div class="single-chip small-chip">RKE</div>
-                    <div class="single-chip small-chip">Node.js</div>
-                    <div class="single-chip small-chip">RabbitMQ</div>
-                    <div class="single-chip small-chip">Linux</div>
-                    <div class="single-chip small-chip">Bash</div>
-                    <div class="single-chip small-chip">Grafana</div>
-                    <div class="single-chip small-chip">Prometheus</div>
-                  </div>
-                </div>
-              </div>
-            </a>
+            {
+              SkillBlocks.map((s:ComplexSkill)=>
+                <SkillBlock skillBlock={s}></SkillBlock>
+              )
+            }
           </div>
         </div>
       </nav>
