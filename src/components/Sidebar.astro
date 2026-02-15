@@ -106,9 +106,9 @@ const { selectedItem } = Astro.props;
   </div>
 
   <script>
-    import { setupNav } from '../scripts/nav.js';
+    import { setupNav } from '../scripts/nav.ts';
     
-    let cleanup;
+    let cleanup:(()=>void)|undefined;
     document.addEventListener('astro:page-load', () => {
       if (cleanup) cleanup();
       cleanup = setupNav();
