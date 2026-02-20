@@ -16,7 +16,7 @@ export const SkillBlocks : ComplexSkill[] = [
                 ]
             },
             {
-                skillTitle: "Data Integrathttp://localhost:4321/software-developmention",
+                skillTitle: "Data Integration",
                 techs: ["Python-SQL Automation"]
             
             },
