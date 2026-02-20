@@ -22,7 +22,7 @@ const { selectedItem } = Astro.props;
         />
         <div>
           <div class="label-white">A. Ona Zaragoza</div>
-          <div class="label-gray">Data Analyst and Business Intelligence Developer</div>
+          <div class="label-gray">Data Analyst dev. & BI architech</div>
         </div>
       </div>
     </a>
@@ -57,7 +57,7 @@ const { selectedItem } = Astro.props;
           alt=""
           class="nav-link-image"
         />
-        <div>Software development</div>
+        <div>Analytics with Python</div>
       </a>
       <a
         href="/devops"
@@ -71,7 +71,21 @@ const { selectedItem } = Astro.props;
           alt=""
           class="nav-link-image"
         />
-        <div>DevOps</div>
+        <div>Data Governance</div>
+      </a>
+            <a
+        href="/devops"
+        class={`nav-link-container w-inline-block ${
+          selectedItem === 'devops' ? 'w--current' : ''
+        }`}
+      >
+        <img
+          src="/assets/dns.svg"
+          loading="eager"
+          alt=""
+          class="nav-link-image"
+        />
+        <div>Interactive Dashboards & BI Solutions</div>
       </a>
       <a
         href="/personal-projects"
