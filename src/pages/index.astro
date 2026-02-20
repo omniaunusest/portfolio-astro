@@ -31,7 +31,12 @@ import { SkillBlocks } from "@data/skill-blocks";
               
             
             </div>
-            <a href="mailto:a.ona.zetaefe@gmail.com	" class="button w-button">Contact</a>
+            <div class="button-list">
+              <a href="mailto:a.ona.zetaefe@gmail.com" class="social-link"><img src="/assets/email.svg"  alt="email icon"/></a>
+              <a href="https://github.com/omniaunusest" class="social-link"><img src="/assets/github.svg" alt="github icon"/></a>
+              <a href="https://www.linkedin.com/in/a-ona-zeta/" class="social-link"><img src="/assets/linkedin.svg" alt="linkedin icon"/></a>
+            </div>
+
           </main>
           <div class="projects-section">
             {
@@ -47,3 +52,22 @@ import { SkillBlocks } from "@data/skill-blocks";
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   </body>
 </html>
+
+<style>
+  .button-list{
+    display:flex;
+    gap:1em;
+  }
+  .social-link{
+    padding: .7em;
+  }
+  .social-link > img{    
+    width: 33px;
+    height: auto;
+  }
+  .social-link:hover{
+    background-color: #202020;
+    box-shadow: 0 8px 12px rgba(8, 8, 8, 0.82);
+    border-radius: .75em;
+  }
+</style>
