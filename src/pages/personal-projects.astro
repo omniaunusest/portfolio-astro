@@ -1,6 +1,6 @@
 ---
 import Header from '../components/Header.astro';
-import Project from '../components/Project.astro';
+import ProjectComponent from '../components/ProjectComponent.astro';
 import Sidebar from '../components/Sidebar.astro';
 const projects = [
   {
@@ -50,7 +50,7 @@ const projects = [
             <section class="items-container">
                 <div class="resouce-items">
                     {projects.map(project => (
-                      <Project 
+                      <ProjectComponent 
                         title={project.title} 
                         desc={project.desc}
                         tech={project.tech}

@@ -1,8 +1,8 @@
 import type { Project } from "../types/types";
 
-export const projects:Project[] = [
+export const softwareDev:Project[] = [
   {
-    projectTitle: "NetoCare",
+    projectTitle: "NetoIdontCare",
     desc: [
       "Built an infrastructure for a telemedicine startup focusing on remote patient monitoring",
       "Created Azure environment from scratch using Terraform as a IaC tool",

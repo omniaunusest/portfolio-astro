@@ -1,18 +1,19 @@
 ---
-import { type Project } from "../types/types";
-import Header from "@compontents/Header.astro";
-import ProjectComponent from "../components/ProjectComponent.astro";
+import {type Project} from "../types/types";
+import {softwareDev} from "@data/projects";
+import Header from "../components/Header.astro";
 import Sidebar from "../components/Sidebar.astro";
-import { softwareDev } from '../data/projects';
+import ProjectComponent from "@compontents/ProjectComponent.astro";
+
 ---
 
 <!DOCTYPE html>
 <html
 >
-  <Header title="DevOps | Sam Bernstein" />
+  <Header title="Coding + Analytics | Ona Z." />
   <body>
     <div class="content">
-        <Sidebar selectedItem="devops" />
+        <Sidebar selectedItem="software-development" />
       <nav class="main">
         <div class="container">
           <div class="back-nav-container">
@@ -22,7 +23,7 @@ import { softwareDev } from '../data/projects';
             >
           </div>
           <div class="content-container">
-            <h1>DevOps</h1>
+            <h1>Software Development</h1>
             <section class="items-container">
                 <div class="resouce-items">
                     {softwareDev.map((e:Project) => (
