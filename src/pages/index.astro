@@ -1,57 +1,49 @@
 ---
 import { type ComplexSkill } from "../types/types";
-import Header from "../components/Header.astro";
-import Sidebar from "../components/Sidebar.astro";
 import SkillBlock from "@compontents/SkillBlock.astro";
 import { SkillBlocks } from "@data/skill-blocks";
+import Layout from "@layouts/Layout.astro";
+
+const navigationPage = "home";
 ---
 
-
-<!DOCTYPE html>
-<html
->
-  <Header title="Ona Z. Fernández" />
-  <body>
-    <div class="content">
-      <Sidebar selectedItem="home" />
-      <nav class="main">
-        <div class="container">
-          <main class="fold-content-container">
-            <div class="fold-content">
-              <h1>Hi, I'm Ona<br />I analyze trends and culture throught code, design and tech research.</h1>
-              <p class="lead">
-                Data analytics developer and Business Intelligent architect. 
-              </p>
-              <p class="lead"> 
-                <br>I bring a proactive team spirit with a focus on identifying biases and meaningful context, skilled in optimizing processes and implementing adaptable and user-friendly solutions.</br>
-              </p>
-              <p>
-                <br>Always curious, always learning!</p><br>
-              </p>
-              
-            
-            </div>
-            <div class="button-list">              
-              <a href="https://github.com/omniaunusest" class="social-link"><img src="/assets/github.svg" alt="github icon"/></a>
-              <a href="https://www.linkedin.com/in/a-ona-zeta/" class="social-link"><img src="/assets/linkedin.svg" alt="linkedin icon"/></a>
-              <a href="mailto:a.ona.zetaefe@gmail.com" class="button w-button">Contact</a>
-            </div>
-
-          </main>
-          <div class="projects-section">
-            {
-              SkillBlocks.map((s:ComplexSkill)=>
-                <SkillBlock skillBlock={s}></SkillBlock>
-              )
-            }
-          </div>
+<Layout selectedItem={navigationPage}>
+  <main class="main">
+    <div class="container">
+      <main class="fold-content-container">
+        <div class="fold-content">
+          <h1>Hi, I'm Ona<br />I analyze trends and culture throught code, design and tech research.</h1>
+          <p class="lead">
+            Data analytics developer and Business Intelligent architect. 
+          </p>
+          <p class="lead"> 
+            <br>I bring a proactive team spirit with a focus on identifying biases and meaningful context, skilled in optimizing processes and implementing adaptable and user-friendly solutions.</br>
+          </p>
+          <p>
+            <br>Always curious, always learning!</p><br>
+          </p>
+          
+        
         </div>
-      </nav>
-    </div>
+        <div class="button-list">              
+          <a href="https://github.com/omniaunusest" class="social-link"><img src="/assets/github.svg" alt="github icon"/></a>
+          <a href="https://www.linkedin.com/in/a-ona-zeta/" class="social-link"><img src="/assets/linkedin.svg" alt="linkedin icon"/></a>
+          <a href="mailto:a.ona.zetaefe@gmail.com" class="button w-button">Contact</a>
+        </div>
 
-    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-  </body>
-</html>
+      </main>
+      <div class="projects-section">
+        {
+          SkillBlocks.map((s:ComplexSkill)=>
+            <SkillBlock skillBlock={s}></SkillBlock>
+          )
+        }
+      </div>
+    </div>
+  </main>
+</Layout>
+  
+
 
 <style>
   .button-list{
