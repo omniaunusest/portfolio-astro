@@ -1,19 +1,18 @@
 ---
-import {type Project} from "../types/types";
-import {softwareDev} from "@data/projects";
-import Header from "../components/Header.astro";
+import { type Project } from "../types/types";
+import Header from "@compontents/Header.astro";
+import ProjectComponent from "../components/ProjectComponent.astro";
 import Sidebar from "../components/Sidebar.astro";
-import ProjectComponent from "@compontents/ProjectComponent.astro";
-
+import { softwareDev } from '../data/projects';
 ---
 
 <!DOCTYPE html>
 <html
 >
-  <Header title="Coding + Analytics | Ona Z." />
+  <Header title="DevOps | Sam Bernstein" />
   <body>
     <div class="content">
-        <Sidebar selectedItem="analytics" />
+        <Sidebar selectedItem="dashboards-and-bi-solutions" />
       <nav class="main">
         <div class="container">
           <div class="back-nav-container">
@@ -23,7 +22,7 @@ import ProjectComponent from "@compontents/ProjectComponent.astro";
             >
           </div>
           <div class="content-container">
-            <h1>Analytics With Python</h1>
+            <h1>Dashboards and BI solutions</h1>
             <section class="items-container">
                 <div class="resouce-items">
                     {softwareDev.map((e:Project) => (
